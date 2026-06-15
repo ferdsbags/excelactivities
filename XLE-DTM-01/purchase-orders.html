@@ -28,7 +28,7 @@
     <span class="badge">Main Artifact</span>
     <span class="note">Sheet: PurchaseOrders &nbsp;·&nbsp; 25 rows</span>
   </div>
-  <div class="table-wrap"><table id="PurchaseOrders">
+  <div class="table-wrap"><table id="PurchaseOrders" name="PurchaseOrders">
 <thead><tr><th>OrderDate</th><th>VendorID</th><th>Quantity</th><th>UnitPrice</th><th>Department</th><th>DeliveryDate</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>2024-10-01</td><td>VND-001</td><td>50</td><td>18000</td><td>IT</td><td>2024-10-08</td><td>Received</td></tr>
@@ -65,7 +65,7 @@
     <span class="badge">Reference</span>
     <span class="note">Sheet: VendorRates &nbsp;·&nbsp; 10 rows &nbsp;·&nbsp; Used in Block 3 VLOOKUP (equivalent to Rates in lecture file)</span>
   </div>
-  <div class="table-wrap"><table id="VendorRates">
+  <div class="table-wrap"><table id="VendorRates" name="VendorRates">
 <thead><tr><th>VendorID</th><th>DiscountRate</th></tr></thead>
 <tbody>
 <tr><td>VND-001</td><td>8.00%</td></tr>
@@ -87,7 +87,7 @@
     <span class="badge">Reference</span>
     <span class="note">Sheet: Holidays &nbsp;·&nbsp; 39 rows (2026 confirmed + 2027 projected) &nbsp;·&nbsp; Used in Block 2 WORKDAY/NETWORKDAYS</span>
   </div>
-  <div class="table-wrap"><table id="Holidays">
+  <div class="table-wrap"><table id="Holidays" name="Holidays">
 <thead><tr><th>HolidayDate</th><th>Holiday Name</th></tr></thead>
 <tbody>
 <tr><td>2026-01-01</td><td>New Year's Day</td></tr>
@@ -139,7 +139,7 @@
     <span class="badge">Validation</span>
     <span class="note">Sheet: Helper &nbsp;·&nbsp; Used as dropdown source in Block 4</span>
   </div>
-  <div class="table-wrap"><table id="Helper">
+  <div class="table-wrap"><table id="Helper" name="Helper">
 <thead><tr><th>Status</th></tr></thead>
 <tbody>
 <tr><td>Pending</td></tr>
@@ -155,7 +155,7 @@
     <span class="badge">Block 6</span>
     <span class="note">Sheet: imported_raw &nbsp;·&nbsp; 30 rows &nbsp;·&nbsp; Contains duplicates and concatenated fields for data management activity</span>
   </div>
-  <div class="table-wrap"><table id="imported_raw">
+  <div class="table-wrap"><table id="imported_raw" name="imported_raw">
 <thead><tr><th>ConcatenatedField</th><th>Quantity</th><th>UnitPrice</th><th>Department</th><th>DeliveryDate</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>VND-003|2024-10-29</td><td>150</td><td>15500</td><td>Legal</td><td>2024-11-05</td><td>Overdue</td></tr>

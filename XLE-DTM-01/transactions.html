@@ -28,7 +28,7 @@
     <span class="badge">Main Artifact</span>
     <span class="note">Sheet: Transactions &nbsp;·&nbsp; 25 rows</span>
   </div>
-  <div class="table-wrap"><table id="Transactions">
+  <div class="table-wrap"><table id="Transactions" name="Transactions">
 <thead><tr><th>TradeDate</th><th>ISIN</th><th>FaceValue</th><th>Price</th><th>Counterparty</th><th>SettlementDate</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>2024-10-01</td><td>XS0001234567</td><td>5000000</td><td>98.5</td><td>BDO Capital</td><td>2024-10-04</td><td>Settled</td></tr>
@@ -65,7 +65,7 @@
     <span class="badge">Reference</span>
     <span class="note">Sheet: Rates &nbsp;·&nbsp; 10 rows &nbsp;·&nbsp; Used in Block 3 VLOOKUP</span>
   </div>
-  <div class="table-wrap"><table id="Rates">
+  <div class="table-wrap"><table id="Rates" name="Rates">
 <thead><tr><th>ISIN</th><th>InterestRate</th></tr></thead>
 <tbody>
 <tr><td>XS0001234567</td><td>5.25%</td></tr>
@@ -87,7 +87,7 @@
     <span class="badge">Reference</span>
     <span class="note">Sheet: Holidays &nbsp;·&nbsp; 39 rows (2026 confirmed + 2027 projected) &nbsp;·&nbsp; Used in Block 2 WORKDAY/NETWORKDAYS</span>
   </div>
-  <div class="table-wrap"><table id="Holidays">
+  <div class="table-wrap"><table id="Holidays" name="Holidays">
 <thead><tr><th>HolidayDate</th><th>Holiday Name</th></tr></thead>
 <tbody>
 <tr><td>2026-01-01</td><td>New Year's Day</td></tr>
@@ -139,7 +139,7 @@
     <span class="badge">Validation</span>
     <span class="note">Sheet: Helper &nbsp;·&nbsp; Used as dropdown source in Block 4</span>
   </div>
-  <div class="table-wrap"><table id="Helper">
+  <div class="table-wrap"><table id="Helper" name="Helper">
 <thead><tr><th>Status</th></tr></thead>
 <tbody>
 <tr><td>Pending</td></tr>
@@ -155,7 +155,7 @@
     <span class="badge">Block 6</span>
     <span class="note">Sheet: imported_raw &nbsp;·&nbsp; 30 rows &nbsp;·&nbsp; Contains duplicates and concatenated fields for data management demo</span>
   </div>
-  <div class="table-wrap"><table id="imported_raw">
+  <div class="table-wrap"><table id="imported_raw" name="imported_raw">
 <thead><tr><th>ConcatenatedField</th><th>FaceValue</th><th>Price</th><th>Counterparty</th><th>SettlementDate</th><th>Status</th></tr></thead>
 <tbody>
 <tr><td>XS0008901234|2024-11-08</td><td>20000000</td><td>101</td><td>PNB Capital</td><td>2024-11-11</td><td>Cancelled</td></tr>
