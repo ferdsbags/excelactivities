@@ -2,299 +2,192 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="site.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Excel Training — Web Data Sources</title>
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: Calibri, 'Segoe UI', Arial, sans-serif;
-  font-size: 14px;
-  color: #1e1e1e;
-  background: #f7f7f5;
-}
-header {
-  background: #1D6A4A;
-  color: #fff;
-  padding: 32px 48px 24px;
-  border-bottom: 4px solid #C8923A;
-}
-header h1 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-header p  { font-size: 13px; color: #aacfbb; max-width: 680px; line-height: 1.6; }
-
-main { max-width: 1100px; margin: 0 auto; padding: 40px 48px 80px; }
-
-.tier {
-  margin-bottom: 52px;
-}
-.tier-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-.tier-header h2 {
-  font-size: 13px;
-  font-weight: 700;
-  color: #1D6A4A;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.tier-badge {
-  font-size: 11px;
-  background: #EAF3EE;
-  color: #1D6A4A;
-  border: 1px solid #b8d9c6;
-  border-radius: 3px;
-  padding: 2px 8px;
-  font-weight: 600;
-}
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 18px;
-}
-
-.course-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-top: 3px solid #1D6A4A;
-  padding: 0;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  transition: box-shadow 0.15s, transform 0.15s;
-}
-.course-card:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-  transform: translateY(-2px);
-}
-.course-card-body {
-  padding: 18px 20px 20px;
-}
-.course-id {
-  font-size: 10.5px;
-  font-weight: 700;
-  color: #C8923A;
-  letter-spacing: 0.06em;
-  margin-bottom: 6px;
-  display: block;
-}
-.course-card h3 {
-  font-size: 14.5px;
-  font-weight: 600;
-  color: #1D6A4A;
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-.course-card p {
-  font-size: 12.5px;
-  color: #6B6B6B;
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-.data-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.data-link {
-  display: inline-block;
-  font-size: 11.5px;
-  font-weight: 600;
-  color: #1D6A4A;
-  background: #EAF3EE;
-  border: 1px solid #b8d9c6;
-  border-radius: 3px;
-  padding: 3px 10px;
-  text-decoration: none;
-  transition: background 0.12s;
-}
-.data-link:hover {
-  background: #d0eadb;
-}
-.data-link.activity {
-  color: #8A5A1A;
-  background: #FDF3E6;
-  border-color: #e0c080;
-}
-.data-link.activity:hover {
-  background: #f5e8cc;
-}
-.no-data {
-  font-size: 11.5px;
-  color: #BBBBBB;
-  font-style: italic;
-}
-
-.how-to {
-  background: #fff;
-  border-left: 4px solid #1D6A4A;
-  padding: 18px 22px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  color: #444;
-  line-height: 1.9;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-.how-to strong { color: #1D6A4A; }
-
-footer {
-  text-align: center;
-  font-size: 11px;
-  color: #aaa;
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #e0e0e0;
-}
-</style>
 </head>
 <body>
-<header>
-  <h1>Excel Training — Web Data Sources</h1>
-  <p>This page lists all courses in the Microsoft Excel training series. Where a course uses the Artifact Sequence Approach, links to the web-hosted demo and activity datasets are provided for direct import into Excel.</p>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">BusinessCoach, Inc. · Excel Training Series</div>
+    <h1>Microsoft Excel Training<br>Web Data Sources</h1>
+    <p>All course datasets are published as HTML tables for direct import into Excel. Where a course uses the Artifact Sequence Approach, demo and activity data pages are linked on the course card.</p>
+    <div class="import-strip">
+      <strong>How to import:</strong>&nbsp;
+      Data tab → <code>Get Data</code> → From Other Sources → <code>From Web</code>
+      → paste the data page URL → OK
+      → select a table in the Navigator → <code>Load</code>
+    </div>
+  </div>
 </header>
+
 <main>
 
-  <div class="how-to">
-    <strong>How to import a table into Excel:</strong><br>
-    Data tab &nbsp;→&nbsp; <strong>Get Data</strong> &nbsp;→&nbsp; From Other Sources &nbsp;→&nbsp; <strong>From Web</strong> &nbsp;→&nbsp; paste the data page URL &nbsp;→&nbsp; OK &nbsp;→&nbsp; select a table in the Navigator &nbsp;→&nbsp; <strong>Load</strong> &nbsp;→&nbsp; rename the worksheet to match the table name.
+  <!-- ── Essentials ─────────────────────────────────────────────────── -->
+  <div class="tier">
+    <span class="tier-label">Microsoft Excel Essentials</span>
+    <div class="course-grid">
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLE-GSE-01</span>
+          <h3>Getting Started with Microsoft Excel</h3>
+          <p>Foundational Excel skills: navigation, data entry, basic formulas, formatting, and printing.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLE-WDF-01</span>
+          <h3>Working with Data and Formulas in Microsoft Excel</h3>
+          <p>Data structuring, lookup formulas, criteria-based aggregation, and output layer design.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLE-DTM-01</span>
+          <h3>Data Tables and Management in Microsoft Excel</h3>
+          <p>Structured Tables, intermediate formulas, data validation, reconciliation, conditional formatting, and data management tools.</p>
+          <div class="data-links">
+            <a class="data-link" href="XLE-DTM-01/transactions.html">Demo Data</a>
+            <a class="data-link activity" href="XLE-DTM-01/purchase-orders.html">Activity Data</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
+  <!-- ── Advanced ───────────────────────────────────────────────────── -->
   <div class="tier">
-    <div class="tier-header">
-      <h2>Microsoft Excel Essentials</h2>
-      <span class="tier-badge">XLE Series</span>
-    </div>
+    <span class="tier-label">Advanced Microsoft Excel</span>
     <div class="course-grid">
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLE-GSE-01</span>
-        <h3>Getting Started with Microsoft Excel</h3>
-        <p>Foundational Excel skills: navigation, data entry, basic formulas, formatting, and printing.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-ARR-01</span>
+          <h3>Automated Report Refresh in Excel</h3>
+          <p>Build a self-updating monthly report from source data to formatted output using structured formulas.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLE-WDF-01</span>
-        <h3>Working with Data and Formulas in Microsoft Excel</h3>
-        <p>Data structuring, lookup formulas, criteria-based aggregation, and output layer design.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-MCC-01</span>
+          <h3>Multi-Condition Calculations in Excel</h3>
+          <p>Apply SUMIFS, COUNTIFS, and IFS-based logic to multi-criteria sales analysis.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLE-DTM-01</span>
-        <h3>Data Tables and Management in Microsoft Excel</h3>
-        <p>Structured Tables, intermediate formulas, data validation, reconciliation, conditional formatting, and data management tools.</p>
-        <div class="data-links"><a class="data-link" href="XLE-DTM-01/transactions.html">Demo Data</a><a class="data-link activity" href="XLE-DTM-01/purchase-orders.html">Activity Data</a></div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-DDR-01</span>
+          <h3>Dynamic Data Retrieval in Excel</h3>
+          <p>XLOOKUP, INDEX/MATCH, and dynamic lookup panels for real-time product data retrieval.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    </div>
-  </div>
-  <div class="tier">
-    <div class="tier-header">
-      <h2>Advanced Microsoft Excel</h2>
-      <span class="tier-badge">XLA Series</span>
-    </div>
-    <div class="course-grid">
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-ARR-01</span>
-        <h3>Automated Report Refresh in Excel</h3>
-        <p>Build a self-updating monthly report from source data to formatted output using structured formulas.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-DCS-01</span>
+          <h3>Data Cleaning and Structuring in Excel</h3>
+          <p>Transform messy imported data into clean, structured tables using Text functions, Flash Fill, and Power Query basics.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-MCC-01</span>
-        <h3>Multi-Condition Calculations in Excel</h3>
-        <p>Apply SUMIFS, COUNTIFS, and IFS-based logic to multi-criteria sales analysis.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-CAV-01</span>
+          <h3>Comparative Analysis and Variance Reporting in Excel</h3>
+          <p>Quarterly variance reports with conditional formatting, flag logic, and department-level summaries.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-DDR-01</span>
-        <h3>Dynamic Data Retrieval in Excel</h3>
-        <p>XLOOKUP, INDEX/MATCH, and dynamic lookup panels for real-time product data retrieval.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-SDP-01</span>
+          <h3>Structured Data Presentation in Excel</h3>
+          <p>Professional output formatting: conditional formatting, linked charts, visual hierarchy, and workbook distribution.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-DCS-01</span>
-        <h3>Data Cleaning and Structuring in Excel</h3>
-        <p>Transform messy imported data into clean, structured tables using Text functions, Flash Fill, and Power Query basics.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-FDA-01</span>
+          <h3>Formula-Based Data Analysis in Excel</h3>
+          <p>End-to-end analysis from data preparation to dynamic formula-driven output using XLOOKUP, SUMIFS, and structured tables.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-CAV-01</span>
-        <h3>Comparative Analysis and Variance Reporting in Excel</h3>
-        <p>Quarterly variance reports with conditional formatting, flag logic, and department-level summaries.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-DMK-01</span>
+          <h3>Advanced Data Modeling and KPI Reporting in Excel</h3>
+          <p>Structured analytical models, advanced formula techniques, business logic, and KPI-driven reports.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-SDP-01</span>
-        <h3>Structured Data Presentation in Excel</h3>
-        <p>Professional output formatting: conditional formatting, linked charts, visual hierarchy, and workbook distribution.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-ADM-01</span>
+          <h3>Advanced Data Modeling in Excel</h3>
+          <p>Layered workbook architecture separating inputs, calculations, and outputs for scalable model design.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-FDA-01</span>
-        <h3>Formula-Based Data Analysis in Excel</h3>
-        <p>End-to-end analysis from data preparation to dynamic formula-driven output using XLOOKUP, SUMIFS, and structured tables.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-ASM-01</span>
+          <h3>Advanced Scenario Modeling in Excel</h3>
+          <p>Income Statement, Balance Sheet, and Cash Flow models with scenario analysis and sensitivity tables.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-DMK-02</span>
-        <h3>Advanced Data Modeling and KPI Reporting in Excel</h3>
-        <p>Structured analytical models, advanced formula techniques, business logic, and KPI-driven reports.</p>
-        <span class="no-data">No web data source yet</span>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <span class="card-id">XLA-DAE-01</span>
+          <h3>Dashboard Architecture in Excel</h3>
+          <p>Complete executive dashboard: layered architecture, visual systems, interactive controls, and recurring-use setup.</p>
+          <span class="no-data">No web data source yet</span>
+        </div>
       </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-ADM-03</span>
-        <h3>Advanced Data Modeling in Excel</h3>
-        <p>Layered workbook architecture separating inputs, calculations, and outputs for scalable model design.</p>
-        <span class="no-data">No web data source yet</span>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-ASM-04</span>
-        <h3>Advanced Scenario Modeling in Excel</h3>
-        <p>Income Statement, Balance Sheet, and Cash Flow models with scenario analysis and sensitivity tables.</p>
-        <span class="no-data">No web data source yet</span>
-      </div>
-    </div>
-    <div class="course-card">
-      <div class="course-card-body">
-        <span class="course-id">XLA-DAE-05</span>
-        <h3>Dashboard Architecture in Excel</h3>
-        <p>Complete executive dashboard: layered architecture, visual systems, interactive controls, and recurring-use setup.</p>
-        <span class="no-data">No web data source yet</span>
-      </div>
-    </div>
+
     </div>
   </div>
 
 </main>
+
 <footer>
-  BusinessCoach, Inc. &nbsp;·&nbsp; Excel Training Series &nbsp;·&nbsp; For training use only
+  BusinessCoach, Inc. &nbsp;·&nbsp; <span>Excel Training Series</span> &nbsp;·&nbsp; For training use only
 </footer>
+
 </body>
 </html>
