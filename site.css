@@ -279,3 +279,5 @@ footer {
   margin-top: 40px;
 }
 footer span { color: var(--gold); }
+
+.accent { color: var(--green); font-weight: 600; }
