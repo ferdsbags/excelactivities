@@ -26,7 +26,7 @@
   <div class="section-header">
     <h2>Bond Settlement Transactions</h2>
     <span class="badge">Main Artifact</span>
-    <span class="note">Sheet: Transactions &nbsp;·&nbsp; 25 rows</span>
+    <span class="note"><strong class="accent">Table 1</strong> → Transactions &nbsp;·&nbsp; Sheet: Transactions &nbsp;·&nbsp; 25 rows</span>
   </div>
   <div class="table-wrap"><table id="Transactions" name="Transactions">
 <thead><tr><th>TradeDate</th><th>ISIN</th><th>FaceValue</th><th>Price</th><th>Counterparty</th><th>SettlementDate</th><th>Status</th></tr></thead>
@@ -63,7 +63,7 @@
   <div class="section-header">
     <h2>Interest Rates</h2>
     <span class="badge">Reference</span>
-    <span class="note">Sheet: Rates &nbsp;·&nbsp; 10 rows &nbsp;·&nbsp; Used in Block 3 VLOOKUP</span>
+    <span class="note"><strong class="accent">Table 2</strong> → Rates &nbsp;·&nbsp; Sheet: Rates &nbsp;·&nbsp; 10 rows &nbsp;·&nbsp; Used in Block 3 VLOOKUP</span>
   </div>
   <div class="table-wrap"><table id="Rates" name="Rates">
 <thead><tr><th>ISIN</th><th>InterestRate</th></tr></thead>
@@ -85,7 +85,7 @@
   <div class="section-header">
     <h2>Philippine Public Holidays</h2>
     <span class="badge">Reference</span>
-    <span class="note">Sheet: Holidays &nbsp;·&nbsp; 39 rows (2026 confirmed + 2027 projected) &nbsp;·&nbsp; Used in Block 2 WORKDAY/NETWORKDAYS</span>
+    <span class="note"><strong class="accent">Table 3</strong> → Holidays &nbsp;·&nbsp; Sheet: Holidays &nbsp;·&nbsp; 39 rows (2026 confirmed + 2027 projected) &nbsp;·&nbsp; Used in Block 2 WORKDAY/NETWORKDAYS</span>
   </div>
   <div class="table-wrap"><table id="Holidays" name="Holidays">
 <thead><tr><th>HolidayDate</th><th>Holiday Name</th></tr></thead>
@@ -137,22 +137,23 @@
   <div class="section-header">
     <h2>Status List</h2>
     <span class="badge">Validation</span>
-    <span class="note">Sheet: Helper &nbsp;·&nbsp; Used as dropdown source in Block 4</span>
+    <span class="note"><strong class="accent">Table 4</strong> → Helper &nbsp;·&nbsp; Sheet: Helper &nbsp;·&nbsp; Used as dropdown source in Block 4</span>
   </div>
   <div class="table-wrap"><table id="Helper" name="Helper">
-<thead><tr><th>Status</th><th>Code</th></tr></thead>
+<thead><tr><th>Status</th></tr></thead>
 <tbody>
-<tr><td>Pending</td><td>1</td></tr>
-<tr><td>Settled</td><td>2</td></tr>
-<tr><td>Overdue</td><td>3</td></tr>
-<tr><td>Cancelled</td><td>4</td></tr>
+<tr><td>Pending</td></tr>
+<tr><td>Settled</td></tr>
+<tr><td>Overdue</td></tr>
+<tr><td>Cancelled</td></tr>
 </tbody></table></div>
+</div>
 
 <div class="section">
   <div class="section-header">
     <h2>Imported Raw Data</h2>
     <span class="badge">Block 6</span>
-    <span class="note">Sheet: imported_raw &nbsp;·&nbsp; 30 rows &nbsp;·&nbsp; Contains duplicates and concatenated fields for data management demo</span>
+    <span class="note"><strong class="accent">Table 5</strong> → imported_raw &nbsp;·&nbsp; Sheet: imported_raw &nbsp;·&nbsp; 30 rows &nbsp;·&nbsp; Contains duplicates and concatenated fields for data management demo</span>
   </div>
   <div class="table-wrap"><table id="imported_raw" name="imported_raw">
 <thead><tr><th>ConcatenatedField</th><th>FaceValue</th><th>Price</th><th>Counterparty</th><th>SettlementDate</th><th>Status</th></tr></thead>
