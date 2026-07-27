@@ -2,25 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Excel for Accounting and Inventory Reporting — Activity Data</title>
 <link rel="stylesheet" href="../site.css">
-<style>
-  body { font-family: Calibri, Arial, sans-serif; margin: 2rem auto; max-width: 1100px; color: #1E1E1E; }
-  h1 { color: #1D6A4A; border-bottom: 3px solid #C8923A; padding-bottom: 0.5rem; }
-  h2 { color: #1D6A4A; margin-top: 2.5rem; }
-  p.note { color: #6B6B6B; font-style: italic; }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0 2rem; font-size: 0.92rem; }
-  th { background: #1D6A4A; color: #FFFFFF; text-align: left; padding: 8px 10px; }
-  td { padding: 6px 10px; border-bottom: 1px solid #E0E0E0; }
-  tr:nth-child(even) td { background: #F8F8F8; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PracticeReport — Activity File</title>
+<style>.hero-title { font-size: 2.2em; font-weight: 700; margin: 0.2em 0; }
+.section-title { font-size: 1.5em; font-weight: 700; margin: 0 0 0.3em 0; }</style>
 </head>
 <body>
-<h1>Accounting & Inventory — Hands-On Activity Dataset</h1>
-<p class="note">Import via Data → Get Data → From Other Sources → From Web. Same structure as the demo dataset, different records — used for the independent hands-on activity.</p>
+<header class="hero">
+  <div class="hero-inner">
+    <a class="hero-back" href="../index.html">← Back to Home</a>
+    <div class="hero-badge">XLE-AIR-01  ·  Activity File</div>
+    <p class="hero-title">PracticeReport.xlsx</p>
+    <p>Same structure, different records — for the independent hands-on activity</p>
+  </div>
+</header>
+<main>
 
-<h2>Table 1 — Transactions</h2>
-<table id="transactions">
+<div class="intro">
+  This is the <strong>hands-on activity file</strong>. Import each table below into a separate worksheet.
+  The main artifact is the <strong>Transactions</strong> table — start here and build it block by block during the session.
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <p class="section-title">Accounting &amp; Inventory Transactions</p>
+    <span class="badge">Main Artifact</span>
+    <span class="note"><strong class="accent">Table 1</strong> → Transactions &nbsp;·&nbsp; Sheet: Transactions &nbsp;·&nbsp; 22 rows</span>
+  </div>
+  <div class="table-wrap"><table id="Transactions" name="Transactions">
 <thead><tr><th>TransactionID</th><th>Date</th><th>Item</th><th>Category</th><th>CategoryID</th><th>SupplierID</th><th>Quantity</th><th>UnitPrice</th><th>TotalCost</th><th>Paid</th></tr></thead>
 <tbody>
 <tr><td>T0101</td><td>2026-05-05</td><td>Wireless Mouse</td><td>Electronics</td><td>C01</td><td>S03</td><td>20</td><td>655.97</td><td>8957.40</td><td>Yes</td></tr>
@@ -46,10 +56,16 @@
 <tr><td>T0121</td><td>2026-05-02</td><td>Desk Lamp</td><td>Appliances</td><td>C04</td><td>S05</td><td>15</td><td>1437.39</td><td>17723.70</td><td>Yes</td></tr>
 <tr><td>T0122</td><td>2026-07-28</td><td>Bookshelf</td><td>Furniture</td><td>C03</td><td>S05</td><td>7</td><td>1120.08</td><td>6582.52</td><td>Yes</td></tr>
 </tbody>
-</table>
+</table></div>
+</div>
 
-<h2>Table 2 — Categories</h2>
-<table id="categories">
+<div class="section">
+  <div class="section-header">
+    <p class="section-title">Categories</p>
+    <span class="badge">Reference</span>
+    <span class="note"><strong class="accent">Table 2</strong> → Categories &nbsp;·&nbsp; Sheet: Categories &nbsp;·&nbsp; 6 rows &nbsp;·&nbsp; Used in Block 3 XLOOKUP</span>
+  </div>
+  <div class="table-wrap"><table id="Categories" name="Categories">
 <thead><tr><th>CategoryID</th><th>CategoryName</th></tr></thead>
 <tbody>
 <tr><td>C01</td><td>Electronics</td></tr>
@@ -59,10 +75,16 @@
 <tr><td>C05</td><td>Stationery</td></tr>
 <tr><td>C06</td><td>Hardware</td></tr>
 </tbody>
-</table>
+</table></div>
+</div>
 
-<h2>Table 3 — Suppliers</h2>
-<table id="suppliers">
+<div class="section">
+  <div class="section-header">
+    <p class="section-title">Suppliers</p>
+    <span class="badge">Reference / Validation</span>
+    <span class="note"><strong class="accent">Table 3</strong> → Suppliers &nbsp;·&nbsp; Sheet: Suppliers &nbsp;·&nbsp; 5 rows &nbsp;·&nbsp; Used in Block 3 VLOOKUP and dropdown validation</span>
+  </div>
+  <div class="table-wrap"><table id="Suppliers" name="Suppliers">
 <thead><tr><th>SupplierID</th><th>SupplierName</th></tr></thead>
 <tbody>
 <tr><td>S01</td><td>ABC Trading Corp</td></tr>
@@ -71,7 +93,12 @@
 <tr><td>S04</td><td>Davao Supply Chain Ltd</td></tr>
 <tr><td>S05</td><td>Luzon Hardware Group</td></tr>
 </tbody>
-</table>
+</table></div>
+</div>
 
+</main>
+<footer>
+  Excel for Accounting and Inventory Reporting &nbsp;·&nbsp; <span>BusinessCoach, Inc.</span> &nbsp;·&nbsp; For training use only
+</footer>
 </body>
 </html>
